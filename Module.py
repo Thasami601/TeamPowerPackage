@@ -206,6 +206,15 @@ def date_parser(dates):
     return data_format               
 =======
 #FUNCTION 6
+'''word_split - split tweets in the dataframe and append them to a new list  
+        Parameters
+        ----------
+        df: dataframe 
+        Returns
+        -------
+        splited tweets in lowercase and merges and merges 
+        the new list into the dataframe column'''
+
 def word_splitter(df):
     
     split_tweets = []
