@@ -1,6 +1,21 @@
 #FUNCTION 1
 
 def dictionary_of_metrics(items):
+
+    """ Calculates summary statistics of the given list :
+    maximum, minimum, median, mean, variance, standard deviation 
+    
+    Parameters
+    ----------
+    items: A list of intergers/floats
+    
+    
+    Returns
+    -------
+    dict: 
+        Returns values of the dictionary as the summary staistics rounded
+        off to two decimal places and the description
+        of the values as keys."""    
     for item in items:
         return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
                 'var': round(np.var(items, ddof = 1), 2), 
