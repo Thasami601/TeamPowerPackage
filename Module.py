@@ -110,6 +110,17 @@ def five_num_summary(items):
 <<<<<<< HEAD
 #FUNCTION 3
 def date_parser(dates):
+     """Date Parser - changes dates to date format 'yyyy-mm-dd'  
+        
+        Parameters
+        ----------
+        dates: list
+                list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
+        
+        Returns
+        -------
+        A list of only the date in 'yyyy-mm-dd' format.
+        """"
     data_format = []                 
     for i in dates:                  
         x =  i.split(" ")[0]        
