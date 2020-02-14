@@ -10,6 +10,7 @@ def dictionary_of_metrics(items):
 
 ### END FUNCTION 
 
+<<<<<<< HEAD
 #FUNCTION 2
 
 def five_num_summary(items):
@@ -18,3 +19,31 @@ def five_num_summary(items):
     b = [round(np.max(items),2),round(np.median(items),2),round(np.min(items),2),round(np.quantile(items,0.25),2),round(np.quantile(items, 0.75),2)]
    
     return dict( list(zip(a,b)))
+=======
+<<<<<<< HEAD
+#FUNCTION 3
+def date_parser(dates):
+    data_format = []                 
+    for i in dates:                  
+        x =  i.split(" ")[0]        
+        data_format.append(x)       
+                                      
+        
+     
+    return data_format               
+=======
+#FUNCTION 6
+def word_splitter(df):
+    
+    split_tweets = []
+    for index, row in df.iterrows():
+        a = (row['Tweets'].split(' '))
+        split_tweets.append([i.lower() for i in a])
+    
+   
+    new_df = df.copy(deep=True)
+    new_df['Split Tweets'] = split_tweets
+    return new_df
+
+>>>>>>> 6ca4870a7738ea3f5ab755257347088b77ddbae0
+>>>>>>> cdfb992842ba647c63b27171ed5bad52dc039aea
