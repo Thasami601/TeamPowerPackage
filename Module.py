@@ -10,7 +10,7 @@ def dictionary_of_metrics(items):
 
 ### END FUNCTION 
 
-#FUNCTION 2
+#FUNCTION 6
 def word_splitter(df):
     
     split_tweets = []
