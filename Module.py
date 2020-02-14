@@ -119,10 +119,12 @@ def five_num_summary(items):
     
     """
     # your code here
-    a = 'max median min q1 q3'.split()
-    b = [round(np.max(items),2),round(np.median(items),2),round(np.min(items),2),round(np.quantile(items,0.25),2),round(np.quantile(items, 0.75),2)]
+    a = 'max median min q1 q3'.split()   #Creates a list with keys for the dictionary
+    b = [round(np.max(items),2),round(np.median(items),2),
+    round(np.min(items),2),round(np.quantile(items,0.25),2),
+    round(np.quantile(items, 0.75),2)]   #Creates a list of values for the dictionary
    
-    return dict( list(zip(a,b)))
+    return dict( list(zip(a,b))) #returns a dictionary matching the keys and values from the lists
 =======
 <<<<<<< HEAD
 #FUNCTION 3
