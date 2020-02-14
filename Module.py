@@ -216,13 +216,13 @@ def date_parser(dates):
         the new list into the dataframe column'''
 
 def word_splitter(df):
-    
+  #spliting tweets row by row
     split_tweets = []
     for index, row in df.iterrows():
         a = (row['Tweets'].split(' '))
         split_tweets.append([i.lower() for i in a])
     
-   
+     #Add to new column in df
     new_df = df.copy(deep=True)
     new_df['Split Tweets'] = split_tweets
     return new_df
