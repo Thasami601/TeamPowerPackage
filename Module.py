@@ -1,7 +1,23 @@
 #FUNCTION 1
-
+### Function to calculate mean, median, variance, standard deviation, min, max
 def dictionary_of_metrics(items):
+
+    """ Calculates summary statistics of the given list :
+    maximum, minimum, median, mean, variance, standard deviation 
+    
+    Parameters
+    ----------
+    items: A list of intergers/floats
+    
+    
+    Returns
+    -------
+    dict: 
+        Returns values of the dictionary as the summary staistics rounded
+        off to two decimal places and the description
+        of the values as keys."""    
     for item in items:
+ # using numpy library to calculate mean, median, var and std        
         return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
                 'var': round(np.var(items, ddof = 1), 2), 
                 'std': round(np.std(items, ddof = 1), 2),'min': round(min(items), 2),
@@ -142,6 +158,22 @@ def stop_words_remover(df):
 #FUNCTION 2
 
 def five_num_summary(items):
+      """ Calculates summary statistics of the given list :
+    maximum, minimum, median, quartile 1, quartile 3
+    
+    Parameters
+    ----------
+    items: A list of intergers/floats
+    
+    
+    Returns
+    -------
+    dict: 
+        Returns values of the dictionary as the summary staistics rounded
+        off to two decimal places and the description
+        of the values as keys.
+    
+    """
     # your code here
     a = 'max median min q1 q3'.split()
     b = [round(np.max(items),2),round(np.median(items),2),round(np.min(items),2),round(np.quantile(items,0.25),2),round(np.quantile(items, 0.75),2)]
@@ -151,6 +183,17 @@ def five_num_summary(items):
 <<<<<<< HEAD
 #FUNCTION 3
 def date_parser(dates):
+     """Date Parser - changes dates to date format 'yyyy-mm-dd'  
+        
+        Parameters
+        ----------
+        dates: list
+                list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
+        
+        Returns
+        -------
+        A list of only the date in 'yyyy-mm-dd' format.
+        """"
     data_format = []                 
     for i in dates:                  
         x =  i.split(" ")[0]        
