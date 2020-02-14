@@ -9,3 +9,14 @@ def dictionary_of_metrics(items):
         
 
 ### END FUNCTION 
+
+#FUNCTION 3
+def date_parser(dates):
+    data_format = []                 
+    for i in dates:                  
+        x =  i.split(" ")[0]        
+        data_format.append(x)       
+                                      
+        
+     
+    return data_format               
