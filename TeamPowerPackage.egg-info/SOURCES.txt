@@ -1,0 +1,8 @@
+README.md
+setup.py
+TeamPowerPackage/__init__.py
+TeamPowerPackage.egg-info/PKG-INFO
+TeamPowerPackage.egg-info/SOURCES.txt
+TeamPowerPackage.egg-info/dependency_links.txt
+TeamPowerPackage.egg-info/requires.txt
+TeamPowerPackage.egg-info/top_level.txt
