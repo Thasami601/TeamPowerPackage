@@ -1,18 +1,7 @@
 #FUNCTION 1
 ### Function to calculate mean, median, variance, standard deviation, min, max
 import numpy as np
-gauteng = [39660.0,
-            36024.0,
-            32127.0,
-            39488.0,
-            18422.0,
-            23532.0,
-            8842.0,
-            37416.0,
-            16156.0,
-            18730.0,
-            19261.0,
-            25275.0]
+import pandas as pd
 
 def dictionary_of_metrics(items):
 
@@ -38,8 +27,7 @@ def dictionary_of_metrics(items):
                 'max': round(max(items), 2)}
         
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ### END FUNCTION
 
 #FUNCTION 2
@@ -67,7 +55,7 @@ def five_num_summary(items):
          round(np.quantile(items, 0.75),2)]
    
     return dict( list(zip(a,b)))
-=======
+
 
 
 #FUNCTION 3
@@ -250,8 +238,4 @@ def stop_words_remover(df):
     df['Without Stop Words']  = split_tweets    
     return df
 
->>>>>>> 6ca4870a7738ea3f5ab755257347088b77ddbae0
->>>>>>> cdfb992842ba647c63b27171ed5bad52dc039aea
->>>>>>> 7d33a759cdc7f9d2c1964b0d4bd5676c6e3705f5
-=======
->>>>>>> c6ef33dd7daa90b0106e6927d3aa3a2206e393a7
+
