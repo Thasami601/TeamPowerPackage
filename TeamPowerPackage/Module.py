@@ -44,9 +44,10 @@ def five_num_summary(items):
     Returns
     -------
     dict: 
-        Returns values of the dictionary as the summary staistics rounded
-        off to two decimal places and the description
-        of the values as keys.
+        Returns a dictionary of summary statistics rounded
+        off to two decimal places with the name of the results 
+        as keys and the results as the corresponding value.
+        
     """
     # your code here
     key = 'max median min q1 q3'.split()
