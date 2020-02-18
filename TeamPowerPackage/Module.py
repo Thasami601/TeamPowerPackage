@@ -17,7 +17,7 @@ def dictionary_of_metrics(items):
         off to two decimal places and the description
         of the values as keys."""    
     for item in items:
- # using numpy library to calculate mean, median, var and std        
+    # using numpy library to calculate mean, median, var and std        
         return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
                 'var': round(np.var(items, ddof = 1), 2), 
                 'std': round(np.std(items, ddof = 1), 2),'min': round(min(items), 2),
@@ -30,21 +30,20 @@ def dictionary_of_metrics(items):
 #FUNCTION 2
 
 def five_num_summary(items):
-      """ Calculates summary statistics of the given list :
+    """ Calculates summary statistics of the given list :
     maximum, minimum, median, quartile 1, quartile 3
-    
+
     Parameters
     ----------
     items: A list of intergers/floats
-    
-    
+
+
     Returns
     -------
     dict: 
         Returns values of the dictionary as the summary staistics rounded
         off to two decimal places and the description
         of the values as keys.
-    
     """
     # your code here
     a = 'max median min q1 q3'.split()
@@ -59,17 +58,17 @@ def five_num_summary(items):
 #FUNCTION 3
 
 def date_parser(dates):
-     """Date Parser - changes dates to date format 'yyyy-mm-dd'  
-        
-        Parameters
-        ----------
-        dates: list
-                list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
-        
-        Returns
-        -------
-        A list of only the date in 'yyyy-mm-dd' format.
-        """"
+    """Date Parser - changes dates to date format 'yyyy-mm-dd'  
+    
+    Parameters
+    ----------
+    dates: list
+            list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
+    
+    Returns
+    -------
+    A list of only the date in 'yyyy-mm-dd' format.
+    """
     data_format = []                 #Empty list.
     for i in dates:                  #Iterate over elements of dates.
         x =  i.split(" ")[0]         #Split the strings in dates to get rid of the times.
@@ -179,17 +178,16 @@ def number_of_tweets_per_day(df):
 
 #FUNCTION 6
 
-'''word_split - split tweets in the dataframe and append them to a new list  
-        Parameters
-        ----------
-        df: dataframe 
-        Returns
-        -------
-        splited tweets in lowercase and merges and merges 
-        the new list into the dataframe column'''
-
 def word_splitter(df):
-  #spliting tweets row by row
+    '''word_split - split tweets in the dataframe and append them to a new list  
+    Parameters
+    ----------
+    df: dataframe 
+    Returns
+    -------
+    splited tweets in lowercase and merges and merges 
+    the new list into the dataframe column'''
+    #spliting tweets row by row
     split_tweets = []
     for index, row in df.iterrows():
         a = (row['Tweets'].split(' '))
@@ -204,7 +202,7 @@ def word_splitter(df):
 ### FUNCTION 7
 
 def stop_words_remover(df):
-'''
+    '''
     Splits given tweets and removes 'stopwords' from them
     
     Parameters
