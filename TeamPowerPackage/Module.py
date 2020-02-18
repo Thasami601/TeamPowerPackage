@@ -225,13 +225,13 @@ def stop_words_remover(df):
     #splits and appends tweets without stopwords to a list
     split_tweets = []
     for i in df['Tweets']:
-        tweet_line = []
+        tweet = []
         for j in i.split(" "):
             if j.lower() in stop_words_dict['stopwords'] or j == '':
                 continue
             else:
-                tweet_line.append(j.lower())
-        split_tweets.append(tweet_line)
+                tweet.append(j.lower())
+        split_tweets.append(tweet)
     #Add 'Without Stop Words' column to df    
     df['Without Stop Words']  = split_tweets    
     return df
