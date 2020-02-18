@@ -50,11 +50,11 @@ def five_num_summary(items):
     """
     # your code here
     key = 'max median min q1 q3'.split()
-    b = [round(np.max(items),2),round(np.median(items),2),
+    values = [round(np.max(items),2),round(np.median(items),2),
          round(np.min(items),2),round(np.quantile(items,0.25),2),
          round(np.quantile(items, 0.75),2)]
    
-    return dict( list(zip(key,b)))
+    return dict( list(zip(key,values)))
 
 
 
