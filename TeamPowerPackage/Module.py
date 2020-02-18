@@ -39,21 +39,21 @@ def five_num_summary(items):
     ----------
     items: A list of intergers/floats
 
-
     Returns
     -------
     dict: 
-        Returns values of the dictionary as the summary staistics rounded
-        off to two decimal places and the description
-        of the values as keys.
+        Returns a dictionary of summary statistics rounded
+        off to two decimal places with the name of the results 
+        as keys and the results as the corresponding value.
+        
     """
     # your code here
-    a = 'max median min q1 q3'.split()
-    b = [round(np.max(items),2),round(np.median(items),2),
+    key = 'max median min q1 q3'.split()
+    values = [round(np.max(items),2),round(np.median(items),2),
          round(np.min(items),2),round(np.quantile(items,0.25),2),
          round(np.quantile(items, 0.75),2)]
    
-    return dict( list(zip(a,b)))
+    return dict( list(zip(key,values)))
 
 
 
