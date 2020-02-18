@@ -8,7 +8,15 @@ def TestFunctions():
                                    'std': 10400.01,
                                    'min': 8842.0,
                                    'max': 39660.0}
-
+    
+    assert Module.five_num_summary(gauteng) == {
+    'max': 39660.0,
+    'median': 24403.5,
+    'min': 8842.0,
+    'q1': 18653.0,
+    'q3': 36372.0
+}
+  assert Module 
 
     assert Module.five_num_summary(gauteng) == {
     'max': 39660.0,
