@@ -40,8 +40,3 @@ def dictionary_of_metrics(items):
                 'max': round(max(items), 2)}
         
 
-<<<<<<< Updated upstream
-=======
-### END FUNCTION
-
->>>>>>> Stashed changes
