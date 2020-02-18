@@ -1,7 +1,7 @@
 # TeamPowerPackage
 This package will collate eskom data and give insight into the major issues affecting the power utility
 This will be achieved through the collection of functions encoded in this package
-
+##### This package will perform the following:
 The following functions are included in this package:
 Function 1: return metric summary statistics in a dictionary format
 Function 2: return five number summary statistics in a dictionary format
