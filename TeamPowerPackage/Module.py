@@ -15,10 +15,7 @@ gauteng = [39660.0,
             19261.0,
             25275.0]
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 def dictionary_of_metrics(items):
 
     """ Calculates summary statistics of the given list :
