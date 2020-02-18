@@ -11,7 +11,12 @@ Building functions using python which will process both numeric and text data.
 # Installing
 + import numpy as np
 + import pandas as pd
-+ To use package import Module.py from TeamPowerPackage
+##### Building package locally
++ `python setup.py sdist`
+##### Installing package from Github
++ `pip install git+https://github.com/Thasami601/TeamPowerPackage`
+##### Updating package from Github
++ `pip install --upgrade git+https://github.com/Thasami601/TeamPowerPackage`
 
 # Details
 - Function 1: returns metric summary statistics in a dictionary format
