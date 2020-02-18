@@ -31,6 +31,9 @@ Building functions using python which will process both numeric and text data.
 - VS Code
 - Python
 
+#### Data and Data types
++Included in the research folder are links and data relevant to Eskom. The data can be used in conjunxtion with the functions in the package
+
 # Authors
 + Mlangeni Simangaliso
 + Mogano Lebogang
