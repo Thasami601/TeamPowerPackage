@@ -12,7 +12,6 @@ def dictionary_of_metrics(items):
     ----------
     items: A list of intergers/floats
     
-    
     Returns
     -------
     dict: 
@@ -93,7 +92,7 @@ def extract_municipality_hashtags(df):
     df: dataframe containing tweets and dates of those tweets
     
     External Requirements
-    ---------------------
+    ----------------------
     mun_dict: A dictionary that contains handles and corresponding municipalities
 
     Returns
@@ -148,7 +147,6 @@ def number_of_tweets_per_day(df):
     -------
     new_df: dataframe with dates of tweets and number of tweets 
     on that day
-    
     '''
 
     dates = []
@@ -217,7 +215,7 @@ def stop_words_remover(df):
     df: dataframe containing tweets and dates of those tweets
 
     External Requirements
-    ------------
+    ---------------------
     stop_words_dict: A dictionary that contains stop words
     
     Returns
@@ -227,15 +225,13 @@ def stop_words_remover(df):
     #splits and appends tweets without stopwords to a list
     split_tweets = []
     for i in df['Tweets']:
-        tweet = []
+        tweet_line = []
         for j in i.split(" "):
             if j.lower() in stop_words_dict['stopwords'] or j == '':
                 continue
             else:
-                tweet.append(j.lower())
-        split_tweets.append(tweet)
+                tweet_line.append(j.lower())
+        split_tweets.append(tweet_line)
     #Add 'Without Stop Words' column to df    
     df['Without Stop Words']  = split_tweets    
     return df
-
-
