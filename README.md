@@ -1,6 +1,6 @@
 # TeamPowerPackage
 This package will collate eskom data and give insight into the major issues affecting the power utility
-<<<<<<< HEAD
+
 This will be achieved through the collection of functions encoded in this package
 
 # Eskom Insights¶
@@ -41,4 +41,4 @@ Building functions using python which will process both numeric and text data.
 + Explore Data Science Academy
 + Joanne Moonsamy (Supervisor)
 + Jonathan G and Ridha (Setting up Github)
-=======
+
