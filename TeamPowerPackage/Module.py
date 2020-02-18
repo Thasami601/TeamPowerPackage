@@ -12,7 +12,6 @@ def dictionary_of_metrics(items):
     ----------
     items: A list of intergers/floats
     
-    
     Returns
     -------
     dict: 
@@ -39,7 +38,6 @@ def five_num_summary(items):
     Parameters
     ----------
     items: A list of intergers/floats
-
 
     Returns
     -------
