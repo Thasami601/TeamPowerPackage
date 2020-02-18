@@ -194,24 +194,28 @@ def number_of_tweets_per_day(df):
 #FUNCTION 6
 
 def word_splitter(df):
-    '''word_split - split tweets in the dataframe and append them to a new list  
+    '''
+    Splits given tweets and adds them another column in given dataframe
+    
     Parameters
     ----------
-    df: dataframe 
+    df: dataframe containing tweets and dates of those tweets
+    
     Returns
-    -------
-    splited tweets in lowercase and merges and merges 
-    the new list into the dataframe column'''
-    #spliting tweets row by row
+    --------
+    df: modified dataframe with 'Split Tweets' added column
+    '''
+    # your code here
+    #split tweets in df and append them to a new list 
     split_tweets = []
     for index, row in df.iterrows():
-        a = (row['Tweets'].split(' '))
-        split_tweets.append([i.lower() for i in a])
+        tweet = (row['Tweets'].split(' '))
+        split_tweets.append([i.lower() for i in tweet])
     
-     #Add to new column in df
-    new_df = df.copy(deep=True)
-    new_df['Split Tweets'] = split_tweets
-    return new_df
+    #Add to new column in df
+    df['Split Tweets'] = split_tweets
+    
+    return df
 
 
 ### FUNCTION 7
@@ -234,12 +238,16 @@ def stop_words_remover(df):
     '''
     #splits and appends tweets without stopwords to a list
     split_tweets = []
-    for index,row in df.iterrows():
-        tweet = row['Tweets'].split(" ")
-        split_tweets.append([i.lower() for i in tweet if i.lower() not in stop_words_dict['stopwords'] and i !=''])
-    
+    for i in df['Tweets']:
+        tweet = []
+        for j in i.split(" "):
+            if j.lower() in stop_words_dict['stopwords'] or j == '':
+                continue
+            else:
+                tweet.append(j.lower())
+        split_tweets.append(tweet)
     #Add 'Without Stop Words' column to df    
-    df['Without Stop Words'] = split_tweets
+    df['Without Stop Words']  = split_tweets    
     return df
 
 >>>>>>> 6ca4870a7738ea3f5ab755257347088b77ddbae0
