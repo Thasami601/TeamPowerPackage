@@ -24,7 +24,6 @@ def dictionary_of_metrics(items):
                 'max': round(max(items), 2)}
         
 
-<<<<<<< HEAD
 ### END FUNCTION
 
 #FUNCTION 2
@@ -53,7 +52,6 @@ def five_num_summary(items):
          round(np.quantile(items, 0.75),2)]
    
     return dict( list(zip(a,b)))
-=======
 
 
 #FUNCTION 3
@@ -229,6 +227,5 @@ def stop_words_remover(df):
     df['Without Stop Words'] = split_tweets
     return df
 
->>>>>>> 6ca4870a7738ea3f5ab755257347088b77ddbae0
 >>>>>>> cdfb992842ba647c63b27171ed5bad52dc039aea
 >>>>>>> 7d33a759cdc7f9d2c1964b0d4bd5676c6e3705f5
