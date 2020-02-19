@@ -157,6 +157,70 @@ extract_municipality_hashtags(twitter_df.copy())
 </table>
 
 - Function 5: returns a datframe with dates of tweets and corresponding number of tweets for a particular day.
+
+_**Expected Output:**_
+
+```python
+
+number_of_tweets_per_day(twitter_df.copy())
+
+```
+
+> <table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tweets</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-11-20</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>2019-11-21</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2019-11-22</th>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>2019-11-23</th>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>2019-11-24</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>2019-11-25</th>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2019-11-26</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>2019-11-27</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>2019-11-28</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>2019-11-29</th>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+
 - Function 6: returns a dataframe with 'Split Tweets' added column.
 - Function 7: returns a modified dataframe with 'Without Stop Words' added column.
 
