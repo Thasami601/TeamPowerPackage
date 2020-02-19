@@ -53,7 +53,7 @@ def five_num_summary(items):
    
     return dict( list(zip(key,values)))
 
-
+### END FUNCTION
 
 #FUNCTION 3
 
@@ -83,7 +83,7 @@ def date_parser(dates):
 
 def extract_municipality_hashtags(df):
     """
-    Finds the municipality and hashtags of from tweets.
+    Finds the municipality and hashtags from tweets.
     
     Parameters
     ----------
@@ -103,8 +103,8 @@ def extract_municipality_hashtags(df):
     hash_list = []
 
     #Iterates though df.
-    for index, row in df.iterrows():
-        tweet = row["Tweets"].split()
+    for i in df['Tweets']:
+        tweet = i.split()
         hashtags = []
 
         #Municipality is initial set to NaN.
@@ -144,14 +144,19 @@ def number_of_tweets_per_day(df):
     
     Returns
     -------
+<<<<<<< HEAD
     new_df: 
         dataframe with dates of tweets and number of tweets 
         on that day
+=======
+    new_df: dataframe with dates of tweets and number of tweets 
+    on that day
+>>>>>>> b5f3c09e54795319dc2010d850cf9703a26c2001
     """
 
     dates = []
-    for index, row in df.iterrows():
-        dates.append(row['Date'].split(' ')[0])
+    for i in df['Date']:
+        dates.append(i.split(' ')[0])
 
     dates_count = []
     count = []
@@ -194,8 +199,8 @@ def word_splitter(df):
 
     #split tweets in df and append them to a new list 
     split_tweets = []
-    for index, row in df.iterrows():
-        tweet = (row['Tweets'].split(' '))
+    for j in df['Tweets']:
+        tweet = (j.split(' '))
         split_tweets.append([i.lower() for i in tweet])
     
     #Add to new column in df
@@ -203,6 +208,7 @@ def word_splitter(df):
     
     return df
 
+### END FUNCTION 
 
 ### FUNCTION 7
 
@@ -235,3 +241,5 @@ def stop_words_remover(df):
     #Add 'Without Stop Words' column to df    
     df['Without Stop Words']  = split_tweets    
     return df
+
+### END OF FUNCTION    
