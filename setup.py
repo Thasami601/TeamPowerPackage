@@ -7,7 +7,7 @@ setup(
     license='MIT',
     description='EDSA Team Power Python Eskom Package',
     long_description=open('README.md').read(),
-    install_requires=['numpy'],
+    install_requires=['numpy', 'pandas'],
     url='https://github.com/Thasami601/Team_1.git',
     author='<Thasami601>',
     author_email='<thasami.soobyah@gmail.com>'
