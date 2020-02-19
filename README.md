@@ -48,6 +48,14 @@ five_num_summary(gauteng) == {
 ```
 
 - Function 3: returns a list of strings of 'dates' in yyyy-mm-dd format.
+
+_**Expected Output:**_
+
+```python
+date_parser(dates[:3]) == ['2019-11-29', '2019-11-29', '2019-11-29']
+date_parser(dates[-3:]) == ['2019-11-20', '2019-11-20', '2019-11-20']
+```
+
 - Function 4: returns a modified dataframe with municipality and hashtags columns corresponding to every tweet.
 - Function 5: returns a datframe with dates of tweets and corresponding number of tweets for a particular day.
 - Function 6: returns a dataframe with 'Split Tweets' added column.
