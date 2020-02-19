@@ -15,8 +15,8 @@ def dictionary_of_metrics(items):
     -------
     dict: 
         Returns values of the dictionary as the summary staistics rounded
-        off to two decimal places and the description
-        of the values as keys."""    
+        off to two decimal places.
+    """    
     # using numpy library to calculate mean, median, min, max, var and std        
     return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
             'var': round(np.var(items, ddof = 1), 2), 
@@ -53,7 +53,7 @@ def five_num_summary(items):
    
     return dict( list(zip(key,values)))
 
-
+### END FUNCTION
 
 #FUNCTION 3
 
@@ -63,11 +63,11 @@ def date_parser(dates):
     Parameters
     ----------
     dates: list
-            list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
+           list of dates and times strings in the format 'yyyy-mm-dd hh:mm:ss'
     
     Returns
     -------
-    A list of only the date in 'yyyy-mm-dd' format.
+    A list of only the dates in 'yyyy-mm-dd' format.
     """
     data_format = []                 #Empty list.
     for i in dates:                  #Iterate over elements of dates.
@@ -82,8 +82,8 @@ def date_parser(dates):
 ###FUNCTION 4
 
 def extract_municipality_hashtags(df):
-    '''
-    Finds the municipality and hashtags of from tweets.
+    """
+    Finds the municipality and hashtags from tweets.
     
     Parameters
     ----------
@@ -97,7 +97,7 @@ def extract_municipality_hashtags(df):
     -------
     df: modified dataframe with municipality and hashtags 
     columns corresponding to every tweet 
-    '''
+    """
 
     mun_list = []
     hash_list = []
@@ -134,7 +134,7 @@ def extract_municipality_hashtags(df):
 ### FUNCTION 5
 
 def number_of_tweets_per_day(df):
-    '''
+    """
     Counts the number of tweets per day
     
     Parameters
@@ -145,7 +145,7 @@ def number_of_tweets_per_day(df):
     -------
     new_df: dataframe with dates of tweets and number of tweets 
     on that day
-    '''
+    """
 
     dates = []
     for index, row in df.iterrows():
@@ -178,7 +178,7 @@ def number_of_tweets_per_day(df):
 #FUNCTION 6
 
 def word_splitter(df):
-    '''
+    """
     Splits given tweets and adds them another column in given dataframe
     
     Parameters
@@ -188,7 +188,7 @@ def word_splitter(df):
     Returns
     --------
     df: modified dataframe with 'Split Tweets' added column
-    '''
+    """
 
     #split tweets in df and append them to a new list 
     split_tweets = []
@@ -201,11 +201,12 @@ def word_splitter(df):
     
     return df
 
+### END FUNCTION 
 
 ### FUNCTION 7
 
 def stop_words_remover(df):
-    '''
+    """
     Splits given tweets and removes 'stopwords' from them
     
     Parameters
@@ -219,7 +220,7 @@ def stop_words_remover(df):
     Returns
     --------
     df: modified dataframe with 'Without Stop Words' added column
-    '''
+    """
     #splits and appends tweets without stopwords to a list
     split_tweets = []
     for i in df['Tweets']:
@@ -233,3 +234,5 @@ def stop_words_remover(df):
     #Add 'Without Stop Words' column to df    
     df['Without Stop Words']  = split_tweets    
     return df
+
+### END OF FUNCTION    
