@@ -33,6 +33,20 @@ dictionary_of_metrics(gauteng) == {'mean': 26244.42,
  ```
 
 - Function 2: returns five number summary statistics in a dictionary format.
+
+_**Expected Output:**_
+
+```python
+five_num_summary(gauteng) == {
+    'max': 39660.0,
+    'median': 24403.5,
+    'min': 8842.0,
+    'q1': 18653.0,
+    'q3': 36372.0
+}
+
+```
+
 - Function 3: returns a list of strings of 'dates' in yyyy-mm-dd format.
 - Function 4: returns a modified dataframe with municipality and hashtags columns corresponding to every tweet.
 - Function 5: returns a datframe with dates of tweets and corresponding number of tweets for a particular day.
