@@ -134,7 +134,7 @@ def extract_municipality_hashtags(df):
 ### FUNCTION 5
 
 def number_of_tweets_per_day(df):
-    '''
+    """
     Counts the number of tweets per day
     
     Parameters
