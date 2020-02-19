@@ -15,7 +15,7 @@ def dictionary_of_metrics(items):
     -------
     dict: 
         Returns values of the dictionary as the summary staistics rounded
-        off to two decimal places and
+        off to two decimal places.
     """    
     # using numpy library to calculate mean, median, min, max, var and std        
     return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
@@ -63,11 +63,11 @@ def date_parser(dates):
     Parameters
     ----------
     dates: list
-            list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
+           list of dates and times strings in the format 'yyyy-mm-dd hh:mm:ss'
     
     Returns
     -------
-    A list of only the date in 'yyyy-mm-dd' format.
+    A list of only the dates in 'yyyy-mm-dd' format.
     """
     data_format = []                 #Empty list.
     for i in dates:                  #Iterate over elements of dates.
