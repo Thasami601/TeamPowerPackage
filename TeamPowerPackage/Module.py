@@ -103,8 +103,8 @@ def extract_municipality_hashtags(df):
     hash_list = []
 
     #Iterates though df.
-    for index, row in df.iterrows():
-        tweet = row["Tweets"].split()
+    for i in df['Tweets']:
+        tweet = i.split()
         hashtags = []
 
         #Municipality is initial set to NaN.
@@ -124,7 +124,7 @@ def extract_municipality_hashtags(df):
         hash_list.append(hashtags)
         mun_list.append(municipality)
     
-    #Adds 'municipality' and 'hashtags' columns to df.
+    #Add 'municipality' and 'hashtags' columns to df.
     df['municipality'] = mun_list
     df['hashtags'] = hash_list
     
