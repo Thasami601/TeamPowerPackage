@@ -57,6 +57,105 @@ date_parser(dates[-3:]) == ['2019-11-20', '2019-11-20', '2019-11-20']
 ```
 
 - Function 4: returns a modified dataframe with municipality and hashtags columns corresponding to every tweet.
+
+_**Expected Outputs:**_ 
+
+```python
+
+extract_municipality_hashtags(twitter_df.copy())
+
+```
+> <table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tweets</th>
+      <th>Date</th>
+      <th>municipality</th>
+      <th>hashtags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>@BongaDlulane Please send an email to mediades...</td>
+      <td>2019-11-29 12:50:54</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>@saucy_mamiie Pls log a call on 0860037566</td>
+      <td>2019-11-29 12:46:53</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>@BongaDlulane Query escalated to media desk.</td>
+      <td>2019-11-29 12:46:10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Before leaving the office this afternoon, head...</td>
+      <td>2019-11-29 12:33:36</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...</td>
+      <td>2019-11-29 12:17:43</td>
+      <td>NaN</td>
+      <td>[#eskomfreestate, #mediastatement]</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>Eskom's Visitors Centresâ€™ facilities include i...</td>
+      <td>2019-11-20 10:29:07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>#Eskom connected 400 houses and in the process...</td>
+      <td>2019-11-20 10:25:20</td>
+      <td>NaN</td>
+      <td>[#eskom, #eskom, #poweringyourworld]</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>@ArthurGodbeer Is the power restored as yet?</td>
+      <td>2019-11-20 10:07:59</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...</td>
+      <td>2019-11-20 10:07:41</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>RT @GP_DHS: The @GautengProvince made a commit...</td>
+      <td>2019-11-20 10:00:09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
 - Function 5: returns a datframe with dates of tweets and corresponding number of tweets for a particular day.
 - Function 6: returns a dataframe with 'Split Tweets' added column.
 - Function 7: returns a modified dataframe with 'Without Stop Words' added column.
