@@ -1,4 +1,5 @@
 1. When a new update is released for numpy, pandas and also for python, the package will be updated with new efficient algorithms.
+(We have to invistigate on how we can achieve to do this).
 2. More functions will be added with an update in the future versions of the package. 
 3. Improve coding skills individually.
 4. Are there better ways to implement these functions? 
