@@ -4,8 +4,7 @@ import numpy as np
 import pandas as pd
 
 def dictionary_of_metrics(items):
-
-    """ Calculates summary statistics of the given list :
+    """Calculates summary statistics of the given list :
     maximum, minimum, median, mean, variance, standard deviation 
     
     Parameters
@@ -16,14 +15,13 @@ def dictionary_of_metrics(items):
     -------
     dict: 
         Returns values of the dictionary as the summary staistics rounded
-        off to two decimal places and the description
-        of the values as keys."""    
-    for item in items:
-    # using numpy library to calculate mean, median, var and std        
-        return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
-                'var': round(np.var(items, ddof = 1), 2), 
-                'std': round(np.std(items, ddof = 1), 2),'min': round(min(items), 2),
-                'max': round(max(items), 2)}
+        off to two decimal places.
+    """    
+    # using numpy library to calculate mean, median, min, max, var and std        
+    return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
+            'var': round(np.var(items, ddof = 1), 2), 
+            'std': round(np.std(items, ddof = 1), 2),'min': round(min(items), 2),
+            'max': round(max(items), 2)}
         
 
 
@@ -47,7 +45,7 @@ def five_num_summary(items):
         as keys and the results as the corresponding value.
         
     """
-    # your code here
+    
     key = 'max median min q1 q3'.split()
     values = [round(np.max(items),2),round(np.median(items),2),
          round(np.min(items),2),round(np.quantile(items,0.25),2),
@@ -55,7 +53,7 @@ def five_num_summary(items):
    
     return dict( list(zip(key,values)))
 
-
+### END FUNCTION
 
 #FUNCTION 3
 
@@ -64,12 +62,12 @@ def date_parser(dates):
     
     Parameters
     ----------
-    dates: list
-            list of datetime strings in the format 'yyyy-mm-dd hh:mm:ss'
+    dates: list of dates and times strings in the format 'yyyy-mm-dd hh:mm:ss'
     
     Returns
     -------
-    A list of only the date in 'yyyy-mm-dd' format.
+    list:
+         A list of only the dates in 'yyyy-mm-dd' format.
     """
     data_format = []                 #Empty list.
     for i in dates:                  #Iterate over elements of dates.
@@ -84,8 +82,8 @@ def date_parser(dates):
 ###FUNCTION 4
 
 def extract_municipality_hashtags(df):
-    '''
-    Finds the municipality and hashtags of from tweets.
+    """
+    Finds the municipality and hashtags from tweets.
     
     Parameters
     ----------
@@ -93,20 +91,32 @@ def extract_municipality_hashtags(df):
     
     External Requirements
     ----------------------
-    mun_dict: A dictionary that contains handles and corresponding municipalities
+    mun_dict: 
+            A dictionary that contains handles and corresponding municipalities
 
     Returns
     -------
-    df: modified dataframe with municipality and hashtags 
-    columns corresponding to every tweet 
-    '''
+    df: 
+        modified dataframe with municipality and hashtags 
+        columns corresponding to every tweet 
+    """
+    # dictionary mapping official municipality twitter handles to the municipality name
+    mun_dict = {
+    '@CityofCTAlerts' : 'Cape Town',
+    '@CityPowerJhb' : 'Johannesburg',
+    '@eThekwiniM' : 'eThekwini' ,
+    '@EMMInfo' : 'Ekurhuleni',
+    '@centlecutility' : 'Mangaung',
+    '@NMBmunicipality' : 'Nelson Mandela Bay',
+    '@CityTshwane' : 'Tshwane'
+    }
 
     mun_list = []
     hash_list = []
 
     #Iterates though df.
-    for index, row in df.iterrows():
-        tweet = row["Tweets"].split()
+    for i in df['Tweets']:
+        tweet = i.split()
         hashtags = []
 
         #Municipality is initial set to NaN.
@@ -136,7 +146,7 @@ def extract_municipality_hashtags(df):
 ### FUNCTION 5
 
 def number_of_tweets_per_day(df):
-    '''
+    """
     Counts the number of tweets per day
     
     Parameters
@@ -145,13 +155,14 @@ def number_of_tweets_per_day(df):
     
     Returns
     -------
-    new_df: dataframe with dates of tweets and number of tweets 
-    on that day
-    '''
+    new_df: 
+        dataframe with dates of tweets and number of tweets 
+        on that day
+    """
 
     dates = []
-    for index, row in df.iterrows():
-        dates.append(row['Date'].split(' ')[0])
+    for i in df['Date']:
+        dates.append(i.split(' ')[0])
 
     dates_count = []
     count = []
@@ -180,7 +191,7 @@ def number_of_tweets_per_day(df):
 #FUNCTION 6
 
 def word_splitter(df):
-    '''
+    """
     Splits given tweets and adds them another column in given dataframe
     
     Parameters
@@ -189,13 +200,14 @@ def word_splitter(df):
     
     Returns
     --------
-    df: modified dataframe with 'Split Tweets' added column
-    '''
-    # your code here
+    df: 
+        modified dataframe with 'Split Tweets' added column
+    """
+
     #split tweets in df and append them to a new list 
     split_tweets = []
-    for index, row in df.iterrows():
-        tweet = (row['Tweets'].split(' '))
+    for j in df['Tweets']:
+        tweet = (j.split(' '))
         split_tweets.append([i.lower() for i in tweet])
     
     #Add to new column in df
@@ -203,11 +215,12 @@ def word_splitter(df):
     
     return df
 
+### END FUNCTION 
 
 ### FUNCTION 7
 
 def stop_words_remover(df):
-    '''
+    """
     Splits given tweets and removes 'stopwords' from them
     
     Parameters
@@ -216,22 +229,60 @@ def stop_words_remover(df):
 
     External Requirements
     ---------------------
-    stop_words_dict: A dictionary that contains stop words
+    stop_words_dict: 
+                    A dictionary that contains stop words
     
     Returns
     --------
-    df: modified dataframe with 'Without Stop Words' added column
-    '''
+    df: 
+        modified dataframe with 'Without Stop Words' added column
+    """
+    # dictionary of english stopwords
+    stop_words_dict = {
+        'stopwords':[
+            'where', 'done', 'if', 'before', 'll', 'very', 'keep', 'something', 'nothing', 'thereupon', 
+            'may', 'why', 'â€™s', 'therefore', 'you', 'with', 'towards', 'make', 'really', 'few', 'former', 
+            'during', 'mine', 'do', 'would', 'of', 'off', 'six', 'yourself', 'becoming', 'through', 
+            'seeming', 'hence', 'us', 'anywhere', 'regarding', 'whole', 'down', 'seem', 'whereas', 'to', 
+            'their', 'various', 'thereafter', 'â€˜d', 'above', 'put', 'sometime', 'moreover', 'whoever', 'although', 
+            'at', 'four', 'each', 'among', 'whatever', 'any', 'anyhow', 'herein', 'become', 'last', 'between', 'still', 
+            'was', 'almost', 'twelve', 'used', 'who', 'go', 'not', 'enough', 'well', 'â€™ve', 'might', 'see', 'whose', 
+            'everywhere', 'yourselves', 'across', 'myself', 'further', 'did', 'then', 'is', 'except', 'up', 'take', 
+            'became', 'however', 'many', 'thence', 'onto', 'â€˜m', 'my', 'own', 'must', 'wherein', 'elsewhere', 'behind', 
+            'becomes', 'alone', 'due', 'being', 'neither', 'a', 'over', 'beside', 'fifteen', 'meanwhile', 'upon', 'next', 
+            'forty', 'what', 'less', 'and', 'please', 'toward', 'about', 'below', 'hereafter', 'whether', 'yet', 'nor', 
+            'against', 'whereupon', 'top', 'first', 'three', 'show', 'per', 'five', 'two', 'ourselves', 'whenever', 
+            'get', 'thereby', 'noone', 'had', 'now', 'everyone', 'everything', 'nowhere', 'ca', 'though', 'least', 
+            'so', 'both', 'otherwise', 'whereby', 'unless', 'somewhere', 'give', 'formerly', 'â€™d', 'under', 
+            'while', 'empty', 'doing', 'besides', 'thus', 'this', 'anyone', 'its', 'after', 'bottom', 'call', 
+            'nâ€™t', 'name', 'even', 'eleven', 'by', 'from', 'when', 'or', 'anyway', 'how', 'the', 'all', 
+            'much', 'another', 'since', 'hundred', 'serious', 'â€˜ve', 'ever', 'out', 'full', 'themselves', 
+            'been', 'in', "'d", 'wherever', 'part', 'someone', 'therein', 'can', 'seemed', 'hereby', 'others', 
+            "'s", "'re", 'most', 'one', "n't", 'into', 'some', 'will', 'these', 'twenty', 'here', 'as', 'nobody', 
+            'also', 'along', 'than', 'anything', 'he', 'there', 'does', 'we', 'â€™ll', 'latterly', 'are', 'ten', 
+            'hers', 'should', 'they', 'â€˜s', 'either', 'am', 'be', 'perhaps', 'â€™re', 'only', 'namely', 'sixty', 
+            'made', "'m", 'always', 'those', 'have', 'again', 'her', 'once', 'ours', 'herself', 'else', 'has', 'nine', 
+            'more', 'sometimes', 'your', 'yours', 'that', 'around', 'his', 'indeed', 'mostly', 'cannot', 'â€˜ll', 'too', 
+            'seems', 'â€™m', 'himself', 'latter', 'whither', 'amount', 'other', 'nevertheless', 'whom', 'for', 'somehow', 
+            'beforehand', 'just', 'an', 'beyond', 'amongst', 'none', "'ve", 'say', 'via', 'but', 'often', 're', 'our', 
+            'because', 'rather', 'using', 'without', 'throughout', 'on', 'she', 'never', 'eight', 'no', 'hereupon', 
+            'them', 'whereafter', 'quite', 'which', 'move', 'thru', 'until', 'afterwards', 'fifty', 'i', 'itself', 'nâ€˜t',
+            'him', 'could', 'front', 'within', 'â€˜re', 'back', 'such', 'already', 'several', 'side', 'whence', 'me', 
+            'same', 'were', 'it', 'every', 'third', 'together'
+        ]
+    }
     #splits and appends tweets without stopwords to a list
     split_tweets = []
     for i in df['Tweets']:
-        tweet_line = []
+        tweet = []
         for j in i.split(" "):
             if j.lower() in stop_words_dict['stopwords'] or j == '':
                 continue
             else:
-                tweet_line.append(j.lower())
-        split_tweets.append(tweet_line)
+                tweet.append(j.lower())
+        split_tweets.append(tweet)
     #Add 'Without Stop Words' column to df    
     df['Without Stop Words']  = split_tweets    
     return df
+
+### END OF FUNCTION    
