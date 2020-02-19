@@ -192,8 +192,8 @@ def word_splitter(df):
 
     #split tweets in df and append them to a new list 
     split_tweets = []
-    for index, row in df.iterrows():
-        tweet = (row['Tweets'].split(' '))
+    for i in df['Tweets']:
+        tweet = (i.split(' '))
         split_tweets.append([i.lower() for i in tweet])
     
     #Add to new column in df
