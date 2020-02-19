@@ -48,7 +48,6 @@ Building functions using python which will process both numeric and text data.
 
 # Acknowledgments
 + African Bank 
-##### Thank you African Bank for giving us this opportunity.
 + Explore Data Science Academy
 + Joanne Moonsamy (Supervisor)
 + Ridha (Co- Supervisor)
