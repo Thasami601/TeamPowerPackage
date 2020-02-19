@@ -31,6 +31,9 @@ Building functions using python which will process both numeric and text data.
 - VS Code
 - Python
 
+# Data used to extract Eskom Insights
+- See Data_Links_and_variables_info folder in TeamPowerPackage
+
 # Authors
 + Mlangeni Simangaliso
 + Mogano Lebogang
