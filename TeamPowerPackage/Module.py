@@ -124,7 +124,7 @@ def extract_municipality_hashtags(df):
         hash_list.append(hashtags)
         mun_list.append(municipality)
     
-    #Add 'municipality' and 'hashtags' columns to df.
+    #Adds 'municipality' and 'hashtags' columns to df.
     df['municipality'] = mun_list
     df['hashtags'] = hash_list
     
@@ -148,8 +148,8 @@ def number_of_tweets_per_day(df):
     """
 
     dates = []
-    for index, row in df.iterrows():
-        dates.append(row['Date'].split(' ')[0])
+    for i in df['Date']:
+        dates.append(i.split(' ')[0])
 
     dates_count = []
     count = []
