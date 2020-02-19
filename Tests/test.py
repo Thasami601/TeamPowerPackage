@@ -1,6 +1,7 @@
 from TeamPowerPackage import Module
 
 def TestFunctions():
+  """ To Test whether functions work"""
 
     assert Module.dictionary_of_metrics(gauteng) == {'mean': 26244.42,
                                    'median': 24403.5,
