@@ -312,6 +312,100 @@ word_splitter(twitter_df.copy())
 
 - Function 7: returns a modified dataframe with 'Without Stop Words' added column.
 
+_**Expected Output**_:
+
+Specific rows:
+
+```python
+stop_words_remover(twitter_df.copy()).loc[0, "Without Stop Words"] == ['@bongadlulane', 'send', 'email', 'mediadesk@eskom.co.za']
+stop_words_remover(twitter_df.copy()).loc[100, "Without Stop Words"] == ['#eskomnorthwest', '#mediastatement', ':', 'notice', 'supply', 'interruption', 'lichtenburg', 'area', 'https://t.co/7hfwvxllit']
+```
+
+Whole table:
+```python
+stop_words_remover(twitter_df.copy())
+```
+
+> <table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tweets</th>
+      <th>Date</th>
+      <th>Without Stop Words</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>@BongaDlulane Please send an email to mediades...</td>
+      <td>2019-11-29 12:50:54</td>
+      <td>[@bongadlulane, send, email, mediadesk@eskom.c...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>@saucy_mamiie Pls log a call on 0860037566</td>
+      <td>2019-11-29 12:46:53</td>
+      <td>[@saucy_mamiie, pls, log, 0860037566]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>@BongaDlulane Query escalated to media desk.</td>
+      <td>2019-11-29 12:46:10</td>
+      <td>[@bongadlulane, query, escalated, media, desk.]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Before leaving the office this afternoon, head...</td>
+      <td>2019-11-29 12:33:36</td>
+      <td>[leaving, office, afternoon,, heading, weekend...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...</td>
+      <td>2019-11-29 12:17:43</td>
+      <td>[#eskomfreestate, #mediastatement, :, eskom, s...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>Eskom's Visitors Centresâ€™ facilities include i...</td>
+      <td>2019-11-20 10:29:07</td>
+      <td>[eskom's, visitors, centresâ€™, facilities, incl...</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>#Eskom connected 400 houses and in the process...</td>
+      <td>2019-11-20 10:25:20</td>
+      <td>[#eskom, connected, 400, houses, process, conn...</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>@ArthurGodbeer Is the power restored as yet?</td>
+      <td>2019-11-20 10:07:59</td>
+      <td>[@arthurgodbeer, power, restored, yet?]</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...</td>
+      <td>2019-11-20 10:07:41</td>
+      <td>[@muthambipaulina, @sabcnewsonline, @iol, @enc...</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>RT @GP_DHS: The @GautengProvince made a commit...</td>
+      <td>2019-11-20 10:00:09</td>
+      <td>[rt, @gp_dhs:, @gautengprovince, commitment, e...</td>
+    </tr>
+  </tbody>
+</table>
+
+
 # Built With
 - VS Code
 - Python
