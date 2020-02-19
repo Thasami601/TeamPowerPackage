@@ -82,7 +82,7 @@ def date_parser(dates):
 ###FUNCTION 4
 
 def extract_municipality_hashtags(df):
-    '''
+    """
     Finds the municipality and hashtags of from tweets.
     
     Parameters
@@ -97,7 +97,7 @@ def extract_municipality_hashtags(df):
     -------
     df: modified dataframe with municipality and hashtags 
     columns corresponding to every tweet 
-    '''
+    """
 
     mun_list = []
     hash_list = []
