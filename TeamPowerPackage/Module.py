@@ -97,7 +97,7 @@ def extract_municipality_hashtags(df):
     -------
     df: modified dataframe with municipality and hashtags 
     columns corresponding to every tweet 
-    '''
+    """
 
     mun_list = []
     hash_list = []
