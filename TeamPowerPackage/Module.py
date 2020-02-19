@@ -206,7 +206,7 @@ def word_splitter(df):
 ### FUNCTION 7
 
 def stop_words_remover(df):
-    '''
+    """
     Splits given tweets and removes 'stopwords' from them
     
     Parameters
