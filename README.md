@@ -1,5 +1,5 @@
 # TeamPowerPackage
-This package will collate eskom data and give insight into the major issues affecting the power utility
+This package will collate Eskom data and calculate metrics.
 This will be achieved through the collection of functions encoded in this package
 
 # Eskom Insights
