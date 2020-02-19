@@ -1,2 +1,6 @@
-When a new update is released for numpy, pandas and also for python, the package will be updated with new efficient algorithms.
-Also, more functions will be added with an update in the future versions of the package. 
+1. When a new update is released for numpy, pandas and also for python, the package will be updated with new efficient algorithms.
+2. More functions will be added with an update in the future versions of the package. 
+3. Improve coding skills individually?
+4. Are there better ways to implement these functions? 
+5. What do the expected outputs really tell us? What insights can we give regarding the expected outputs.
+6. Individually getting familiar with github and building packages.
