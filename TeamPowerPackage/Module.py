@@ -15,8 +15,8 @@ def dictionary_of_metrics(items):
     -------
     dict: 
         Returns values of the dictionary as the summary staistics rounded
-        off to two decimal places and the description
-        of the values as keys."""    
+        off to two decimal places and the 
+        of the values as."""    
     # using numpy library to calculate mean, median, min, max, var and std        
     return {'mean': round(np.mean(items), 2),  'median': round(np.median(items), 2),
             'var': round(np.var(items, ddof = 1), 2), 
