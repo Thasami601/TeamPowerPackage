@@ -20,6 +20,18 @@ Building functions using python which will process both numeric and text data.
 
 # Details
 - Function 1: returns metric summary statistics in a dictionary format.
+
+_**Expected Output**_:
+
+```python
+dictionary_of_metrics(gauteng) == {'mean': 26244.42,
+                                   'median': 24403.5,
+                                   'var': 108160153.17,
+                                   'std': 10400.01,
+                                   'min': 8842.0,
+                                   'max': 39660.0}
+ ```
+
 - Function 2: returns five number summary statistics in a dictionary format.
 - Function 3: returns a list of strings of 'dates' in yyyy-mm-dd format.
 - Function 4: returns a modified dataframe with municipality and hashtags columns corresponding to every tweet.
@@ -52,4 +64,3 @@ Building functions using python which will process both numeric and text data.
 + Ridha (Co- Supervisor)
 ##### Thank you for consistent guidance and support.
 + Jonathan G and Ridha (Setting up Github)
-
