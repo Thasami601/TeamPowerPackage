@@ -67,7 +67,7 @@ def date_parser(dates):
     
     Returns
     -------
-    A list of only the dates in 'yyyy-mm-dd' format.
+    list : A list of only the dates in 'yyyy-mm-dd' format.
     """
     data_format = []                 #Empty list.
     for i in dates:                  #Iterate over elements of dates.
@@ -134,18 +134,20 @@ def extract_municipality_hashtags(df):
 ### FUNCTION 5
 
 def number_of_tweets_per_day(df):
-    '''
+    """
     Counts the number of tweets per day
     
     Parameters
     ----------
-    df: dataframe containing tweets and dates of those tweets
+    df: 
+        dataframe containing tweets and dates of those tweets
     
     Returns
     -------
-    new_df: dataframe with dates of tweets and number of tweets 
-    on that day
-    '''
+    new_df: 
+        dataframe with dates of tweets and number of tweets 
+        on that day
+    """
 
     dates = []
     for index, row in df.iterrows():
@@ -178,7 +180,7 @@ def number_of_tweets_per_day(df):
 #FUNCTION 6
 
 def word_splitter(df):
-    '''
+    """
     Splits given tweets and adds them another column in given dataframe
     
     Parameters
@@ -188,7 +190,7 @@ def word_splitter(df):
     Returns
     --------
     df: modified dataframe with 'Split Tweets' added column
-    '''
+    """
 
     #split tweets in df and append them to a new list 
     split_tweets = []
@@ -205,7 +207,7 @@ def word_splitter(df):
 ### FUNCTION 7
 
 def stop_words_remover(df):
-    '''
+    """
     Splits given tweets and removes 'stopwords' from them
     
     Parameters
@@ -219,7 +221,7 @@ def stop_words_remover(df):
     Returns
     --------
     df: modified dataframe with 'Without Stop Words' added column
-    '''
+    """
     #splits and appends tweets without stopwords to a list
     split_tweets = []
     for i in df['Tweets']:
