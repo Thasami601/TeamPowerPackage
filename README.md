@@ -1,6 +1,6 @@
 # TeamPowerPackage
 This package will collate Eskom data and calculate metrics.
-This will be achieved through the collection of functions encoded in this package
+This will be achieved through the collection of functions encoded in this package.
 
 # Eskom Insights
 Building functions using python which will process both numeric and text data.
@@ -31,6 +31,7 @@ Building functions using python which will process both numeric and text data.
 # Built With
 - VS Code
 - Python
+- Jupter/google colab
 
 # Data used to extract Eskom Insights
 - See Data_Links_and_variables_info folder in TeamPowerPackage
@@ -47,9 +48,7 @@ Building functions using python which will process both numeric and text data.
 
 # Acknowledgments
 + African Bank 
-##### Thank you African Bank for giving us this opportunity.
 + Explore Data Science Academy
-+ Joanne Moonsamy (Supervisor)
++ Joanne Moonsamy (Supervisor) : Thank you for consistent guidance and support.
 + Ridha (Co- Supervisor)
-##### Thank you for consistent guidance and support.
 + Jonathan G and Ridha (Setting up Github)

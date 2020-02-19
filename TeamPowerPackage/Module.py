@@ -1,8 +1,9 @@
-#FUNCTION 1
-### Function to calculate mean, median, variance, standard deviation, min, max
 import numpy as np
 import pandas as pd
 
+#FUNCTION 1
+
+### Function to calculate mean, median, variance, standard deviation, min, max
 def dictionary_of_metrics(items):
     """Calculates summary statistics of the given list :
     maximum, minimum, median, mean, variance, standard deviation 
@@ -23,8 +24,6 @@ def dictionary_of_metrics(items):
             'std': round(np.std(items, ddof = 1), 2),'min': round(min(items), 2),
             'max': round(max(items), 2)}
         
-
-
 ### END FUNCTION
 
 #FUNCTION 2
@@ -77,7 +76,8 @@ def date_parser(dates):
         
      
     return data_format               #Return the new list 'data_format'.
-   
+
+### END FUNCTION
 
 ###FUNCTION 4
 
@@ -89,10 +89,10 @@ def extract_municipality_hashtags(df):
     ----------
     df: dataframe containing tweets and dates of those tweets
     
-    External Requirements
-    ----------------------
+    Requirements
+    ------------
     mun_dict: 
-            A dictionary that contains handles and corresponding municipalities
+            A dictionary that contains handles and corresponding municipalities (included in the function)
 
     Returns
     -------
@@ -100,7 +100,6 @@ def extract_municipality_hashtags(df):
         modified dataframe with municipality and hashtags 
         columns corresponding to every tweet 
     """
-    # dictionary mapping official municipality twitter handles to the municipality name
     mun_dict = {
     '@CityofCTAlerts' : 'Cape Town',
     '@CityPowerJhb' : 'Johannesburg',
@@ -141,6 +140,7 @@ def extract_municipality_hashtags(df):
     df['hashtags'] = hash_list
     
     return df
+
 ### END FUNCTION
 
 ### FUNCTION 5
@@ -186,8 +186,6 @@ def number_of_tweets_per_day(df):
 
 ### END FUNCTION
 
-
-
 #FUNCTION 6
 
 def word_splitter(df):
@@ -227,17 +225,16 @@ def stop_words_remover(df):
     ----------
     df: dataframe containing tweets and dates of those tweets
 
-    External Requirements
-    ---------------------
+    Requirements
+    ------------
     stop_words_dict: 
-                    A dictionary that contains stop words
+                    A dictionary that contains stop words (included in the function)
     
     Returns
     --------
     df: 
         modified dataframe with 'Without Stop Words' added column
     """
-    # dictionary of english stopwords
     stop_words_dict = {
         'stopwords':[
             'where', 'done', 'if', 'before', 'll', 'very', 'keep', 'something', 'nothing', 'thereupon', 
