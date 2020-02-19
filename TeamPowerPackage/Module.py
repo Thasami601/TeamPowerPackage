@@ -145,7 +145,7 @@ def number_of_tweets_per_day(df):
     -------
     new_df: dataframe with dates of tweets and number of tweets 
     on that day
-    '''
+    """
 
     dates = []
     for index, row in df.iterrows():
