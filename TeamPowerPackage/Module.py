@@ -178,7 +178,7 @@ def number_of_tweets_per_day(df):
 #FUNCTION 6
 
 def word_splitter(df):
-    '''
+    """
     Splits given tweets and adds them another column in given dataframe
     
     Parameters
@@ -188,7 +188,7 @@ def word_splitter(df):
     Returns
     --------
     df: modified dataframe with 'Split Tweets' added column
-    '''
+    """
 
     #split tweets in df and append them to a new list 
     split_tweets = []
