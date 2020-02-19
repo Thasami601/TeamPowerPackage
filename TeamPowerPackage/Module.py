@@ -45,7 +45,7 @@ def five_num_summary(items):
         as keys and the results as the corresponding value.
         
     """
-    # your code here
+    
     key = 'max median min q1 q3'.split()
     values = [round(np.max(items),2),round(np.median(items),2),
          round(np.min(items),2),round(np.quantile(items,0.25),2),
@@ -189,7 +189,7 @@ def word_splitter(df):
     --------
     df: modified dataframe with 'Split Tweets' added column
     '''
-    # your code here
+
     #split tweets in df and append them to a new list 
     split_tweets = []
     for index, row in df.iterrows():
