@@ -82,7 +82,7 @@ def date_parser(dates):
 ###FUNCTION 4
 
 def extract_municipality_hashtags(df):
-    '''
+    """
     Finds the municipality and hashtags of from tweets.
     
     Parameters
