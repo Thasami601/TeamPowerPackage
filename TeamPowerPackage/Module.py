@@ -62,12 +62,12 @@ def date_parser(dates):
     
     Parameters
     ----------
-    dates: list
-           list of dates and times strings in the format 'yyyy-mm-dd hh:mm:ss'
+    dates: list of dates and times strings in the format 'yyyy-mm-dd hh:mm:ss'
     
     Returns
     -------
-    list : A list of only the dates in 'yyyy-mm-dd' format.
+    list:
+         A list of only the dates in 'yyyy-mm-dd' format.
     """
     data_format = []                 #Empty list.
     for i in dates:                  #Iterate over elements of dates.
@@ -91,12 +91,14 @@ def extract_municipality_hashtags(df):
     
     External Requirements
     ----------------------
-    mun_dict: A dictionary that contains handles and corresponding municipalities
+    mun_dict: 
+            A dictionary that contains handles and corresponding municipalities
 
     Returns
     -------
-    df: modified dataframe with municipality and hashtags 
-    columns corresponding to every tweet 
+    df: 
+        modified dataframe with municipality and hashtags 
+        columns corresponding to every tweet 
     """
 
     mun_list = []
@@ -139,19 +141,13 @@ def number_of_tweets_per_day(df):
     
     Parameters
     ----------
-    df: 
-        dataframe containing tweets and dates of those tweets
+    df: dataframe containing tweets and dates of those tweets
     
     Returns
     -------
-<<<<<<< HEAD
     new_df: 
         dataframe with dates of tweets and number of tweets 
         on that day
-=======
-    new_df: dataframe with dates of tweets and number of tweets 
-    on that day
->>>>>>> b5f3c09e54795319dc2010d850cf9703a26c2001
     """
 
     dates = []
@@ -194,7 +190,8 @@ def word_splitter(df):
     
     Returns
     --------
-    df: modified dataframe with 'Split Tweets' added column
+    df: 
+        modified dataframe with 'Split Tweets' added column
     """
 
     #split tweets in df and append them to a new list 
@@ -222,11 +219,13 @@ def stop_words_remover(df):
 
     External Requirements
     ---------------------
-    stop_words_dict: A dictionary that contains stop words
+    stop_words_dict: 
+                    A dictionary that contains stop words
     
     Returns
     --------
-    df: modified dataframe with 'Without Stop Words' added column
+    df: 
+        modified dataframe with 'Without Stop Words' added column
     """
     #splits and appends tweets without stopwords to a list
     split_tweets = []
