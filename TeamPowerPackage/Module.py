@@ -234,3 +234,5 @@ def stop_words_remover(df):
     #Add 'Without Stop Words' column to df    
     df['Without Stop Words']  = split_tweets    
     return df
+
+### END OF FUNCTION    
